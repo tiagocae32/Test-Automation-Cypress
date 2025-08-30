@@ -1,4 +1,3 @@
-import { userData } from "../Data/userData"
 
 
 function generateRandomDNI(): string {
@@ -10,25 +9,4 @@ function generateRandomEmail(): string {
 }
 
 
-function fillInputs(password: string) {
-  cy.get('[data-cy="input-nombres"]').type(userData.nombres)
-  cy.get('[data-cy="input-apellido"]').type(userData.apellido)
-  cy.get('[data-cy="input-telefono"]').type(userData.telefono)
-  cy.get('[data-cy="input-dni"]').type(userData.dni)
-  cy.get('[data-cy="select-provincia"]').click()
-  cy.get('[data-cy="select-provincia"]').type(`${userData.provincia}{enter}`)
-  cy.get('[data-cy="select-localidad"]').click()
-  cy.get('[data-cy="select-localidad"]').type(`${userData.localidad}{enter}`)
-  cy.contains('dd').type(userData.fechaNacimiento.dd)
-  cy.contains('mm').type(userData.fechaNacimiento.mm)
-  cy.contains('aaaa').type(userData.fechaNacimiento.aaaa)
-  cy.get('[data-cy="input-email"]').type(userData.email)
-  cy.get('[data-cy="input-confirmar-email"]').type(userData.email)
-  cy.get('[data-cy="input-password"]').type(password)
-  cy.get('[data-cy="input-repetir-password"]').type(password)
-  cy.get('[data-cy="btn-registrarse"]').click()
-}
-
-
-
-export { generateRandomDNI, generateRandomEmail,fillInputs }
+export { generateRandomDNI, generateRandomEmail }

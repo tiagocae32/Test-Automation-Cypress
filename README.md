@@ -6,8 +6,9 @@ Este proyecto contiene pruebas automatizadas para el registro de usuarios en Tic
 
 - **cypress/e2e/Firsts Tests/**: Pruebas end-to-end del registro.
 - **cypress/e2e/Data/**: Datos de prueba y generadores aleatorios.
-- **cypress/e2e/Helpers/**: Funciones auxiliares para rellenar formularios.
+- **cypress/e2e/Helpers/**: Funciones auxiliares.
 - **cypress/e2e/Constants/**: Constantes usadas en los tests.
+- **cypress/support/commands.ts**: Comandos personalizados de Cypress para reutilizar acciones comunes en los tests.
 
 ## Instalación
 
