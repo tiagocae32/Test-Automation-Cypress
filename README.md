@@ -1,0 +1,39 @@
+# Testing Ticketazo
+
+Este proyecto contiene pruebas automatizadas para el registro de usuarios en Ticketazo utilizando Cypress con TypeScript.
+
+## Estructura
+
+- **cypress/e2e/Firsts Tests/**: Pruebas end-to-end del registro.
+- **cypress/e2e/Data/**: Datos de prueba y generadores aleatorios.
+- **cypress/e2e/Helpers/**: Funciones auxiliares para rellenar formularios.
+- **cypress/e2e/Constants/**: Constantes usadas en los tests.
+
+## Instalación
+
+1. Clona el repositorio.
+2. Instala dependencias:
+   ```bash
+   npm install
+   ```
+
+## Ejecución de tests
+
+Para correr los tests de Cypress:
+```bash
+npx cypress open
+```
+o en modo headless:
+```bash
+npx cypress run
+```
+
+## Contribución
+
+- Mantén el código modular y reutilizable.
+- Agrega nuevos tests en la carpeta correspondiente.
+- Documenta cualquier función nueva en este README.
+
+## Contacto
+
+Para dudas o sugerencias, contactame a mi mail: tiagoviezzoli@gmail.com
