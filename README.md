@@ -4,10 +4,10 @@ Este proyecto contiene pruebas automatizadas para el registro de usuarios en Tic
 
 ## Estructura
 
-- **cypress/e2e/Firsts Tests/**: Pruebas end-to-end del registro.
-- **cypress/e2e/Data/**: Datos de prueba y generadores aleatorios.
-- **cypress/e2e/Helpers/**: Funciones auxiliares.
-- **cypress/e2e/Constants/**: Constantes usadas en los tests.
+- **cypress/e2e/Ticketazo/**: Pruebas end-to-end del registro de usuario.
+- **cypress/e2e/Ticketazo/Data/**: Datos de prueba y generadores aleatorios.
+- **cypress/e2e/Ticketazo/Helpers/**: Funciones auxiliares.
+- **cypress/e2e/Ticketazo/Constants/**: Constantes usadas en los tests.
 - **cypress/support/commands.ts**: Comandos personalizados de Cypress para reutilizar acciones comunes en los tests.
 
 ## Instalación

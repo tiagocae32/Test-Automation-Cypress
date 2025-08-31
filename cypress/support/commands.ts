@@ -26,7 +26,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
 
-import { userData } from "../e2e/Firsts Tests/Data/userData"
+import { userData } from "../e2e/Ticketazo/Data/userData"
 
 
 
@@ -38,6 +38,7 @@ declare global {
         //dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
         //visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
         fillInputs(password: string): Chainable<void>
+        clickRegisterButton(): Chainable<void>
     }
    }
  }
@@ -60,5 +61,8 @@ Cypress.Commands.add('fillInputs', (password: string) => {
   cy.get('[data-cy="input-confirmar-email"]').type(userData.email)
   cy.get('[data-cy="input-password"]').type(password)
   cy.get('[data-cy="input-repetir-password"]').type(password)
+})
+
+Cypress.Commands.add('clickRegisterButton', () => {
   cy.get('[data-cy="btn-registrarse"]').click()
 })

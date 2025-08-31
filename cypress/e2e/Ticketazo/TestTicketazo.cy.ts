@@ -1,26 +1,34 @@
 
 
-import { ERROR_FORMATO_PASSWORD, ERROR_LONGITUD_PASSWORD, URL_TICKETAZO } from "./Constants"
+import * as Constants from "./Constants"
 import { userData } from "./Data/userData"
 
 describe('Test registro Ticketazo', () => {
   beforeEach(() => {
-    cy.visit(URL_TICKETAZO)
+    cy.visit(Constants.URL_TICKETAZO)
   })
 
   it('Happy path', () => {
     cy.title().should('eq', 'Ticketazo')
     cy.fillInputs(userData.password)
+    cy.clickRegisterButton()
     cy.url().should('include', '/auth/login')
+  })
+
+  it('Error Generico', () => {
+    cy.clickRegisterButton()
+    cy.contains(Constants.ERROR_GENERICO).should('be.visible')
   })
 
   it('Error longitud contraseña', () => {
     cy.fillInputs(userData.wrongLengthPassword)
-    cy.contains(ERROR_LONGITUD_PASSWORD).should('be.visible')
+    cy.clickRegisterButton()
+    cy.contains(Constants.ERROR_LONGITUD_PASSWORD).should('be.visible')
   })
 
   it('Error formato contraseña', () => {
     cy.fillInputs(userData.wrongFormatPassword)
-    cy.contains(ERROR_FORMATO_PASSWORD).should('be.visible')
+    cy.clickRegisterButton()
+    cy.contains(Constants.ERROR_FORMATO_PASSWORD).should('be.visible')
   })
 })
