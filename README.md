@@ -14,7 +14,7 @@ Este proyecto contiene pruebas automatizadas para el registro de usuarios en Tic
 
 1. Clona el repositorio.
  ```bash
-   git clone https://github.com/tiagocae32/Test-Automation-Cypress.git
+ git clone https://github.com/tiagocae32/Test-Automation-Cypress.git
    ```
 2. Instala dependencias:
    ```bash
